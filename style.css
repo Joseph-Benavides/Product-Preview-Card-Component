@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1000px;
+    min-width: 310px;
+    width: 90%;
+    padding: 10px;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Image Section */
+.img-perfume {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    max-width: 100%;
+}
+
+.img-perfume-desktop {
+    display: none;
+}
+
+/* Description Section */
+#section-description {
+    margin-top: -4px;
+    padding: 16px;
+    background-color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.descrip-category {
+    padding: 10px 0px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: rgb(111, 111, 111);
+    letter-spacing: 2px;
+}
+
+.descrip-title, .pricing {
+    font-family: 'Fraunces';
+    /* font-weight: 800; */
+    /* font-size: 2rem;     */
+}
+
+.descrip-title, .descrip-info, .pricing {
+    padding: 6px 18px;
+}
+
+.descrip-title {
+    font-size: 1.85rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.descrip-info {
+    margin: 4px 0;
+    line-height: 26px;
+    font-weight: 500;
+    color: rgb(111, 111, 111);
+}
+
+.pricing {
+    display: flex;
+    align-items: center;
+}
+
+.descrip-price {
+    margin-right: 16px;
+    font-size: 1.85rem;
+    font-weight: 900;
+    color: rgb(2, 119, 102);
+}
+
+.descrip-past-price {
+    font-weight: 500;
+    color: rgb(111, 111, 111);
+    text-decoration: line-through;
+}
+
+button {
+    margin: 10px auto; 
+    padding: 14px 20px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    background-color: rgb(2, 119, 102);
+    color: white;
+    border: none;
+    border-radius: 8px;
+}
+
+button i {
+    margin-right: 12px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: black;
+}
+
+/* Media Queries */
+@media(min-width:620px) {
+    .flex {
+        flex-direction: row;
+    }
+
+    /* Image Section */
+    .img-perfume {
+        display: none;
+    }
+    .img-perfume-desktop {
+        display: unset;
+        max-height: 458px;
+        /* max-width: 364px; */
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+    }
+    /* Description Section */
+    #section-description {
+        max-width: 340px;
+        min-width: 282px;
+        height: 458px;
+        padding: 16px;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+    .descrip-category {
+        padding: 16px 0px;
+    }
+    .descrip-title {
+        font-size: 1.95rem;
+    }
+    .descrip-title, .descrip-info, .pricing {
+        padding: 6px 18px;
+    }
+    button {
+        margin: 11px auto;
+    }
+}
